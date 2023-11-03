@@ -12,6 +12,11 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      borderRadius: {
+        'px': '1px',   // You can add custom radius values
+        '3': '3px',    // Example: 'rounded-3' will apply a 3px border radius
+        '6': '6px',    // Example: 'rounded-4' will apply a 4px border radius
+      },
     },
   },
   plugins: [],

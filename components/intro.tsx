@@ -4,11 +4,15 @@ import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { BsArrowRight, BsLinkedin } from "react-icons/bs";
-import { HiDownload } from "react-icons/hi";
+import { SiMinutemailer } from "react-icons/si";
+import { FaLinkedinIn } from "react-icons/fa";
+import { TbBrandGithubFilled } from "react-icons/tb";
+import { FiDownload } from "react-icons/fi";
 import { FaGithubSquare } from "react-icons/fa";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
+
+import me from "../public/me.jpg";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -31,8 +35,8 @@ export default function Intro() {
             }}
           >
             <Image
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=368&h=368&q=100"
-              alt="Ricardo portrait"
+              src={me}
+              alt="Seerat portrait"
               width="192"
               height="192"
               quality="95"
@@ -62,11 +66,31 @@ export default function Intro() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hello, I'm Seerat Ali.</span> I'm a{" "}
-        <span className="font-bold">passionate Frontend developer</span> with{" "}
-        <span className="font-bold">more than a year of hands-on </span> experience. Dedicated to crafting responsive, user-friendly, and performance-driven  <span className="italic">web applications</span>.
-        <span className="underline"> Let's create exceptional digital experiences together!</span>.
+        <div className="intro-container">
+          <p>Seerat Ali</p>
+          <p style={{fontSize: "20px"}}>Software Engineer</p>
+          <p style={{fontSize: "14px", color: "#9E9FA5"}}>Open for Work</p>
+        </div>
       </motion.h1>
+
+        <div className="flex items-center justify-center gap-2">
+       <a
+          className="bg-blue-500 p-2 rounded-6 hover:text-gray-950 flex w-16 justify-center items-center focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          href="https://www.linkedin.com/in/seerat-ali-7b56a2212/"
+          target="_blank"
+        >
+          <FaLinkedinIn color="white" />
+        </a>
+
+        <a
+          className="bg-black p-2 rounded-6 text-gray-700 flex w-16 justify-center items-center focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          href="https://github.com/seeratalishah"
+          target="_blank"
+        >
+          <TbBrandGithubFilled color="white" />
+        </a>
+       </div>
+        <br />
 
       <motion.div
         className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
@@ -84,8 +108,8 @@ export default function Intro() {
             setTimeOfLastClick(Date.now());
           }}
         >
-          Contact me here{" "}
-          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+          Contact me{" "}
+          <SiMinutemailer className="opacity-70 group-hover:translate-x-1 transition" />
         </Link>
 
         <a
@@ -93,25 +117,11 @@ export default function Intro() {
           href="/CV.pdf"
           download
         >
-          Download CV{" "}
-          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+          Download Resume{" "}
+          <FiDownload className="opacity-60 group-hover:translate-y-1 transition" />
         </a>
 
-        <a
-          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://www.linkedin.com/in/seerat-ali-7b56a2212/"
-          target="_blank"
-        >
-          <BsLinkedin />
-        </a>
-
-        <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
-          href="https://github.com/seeratalishah"
-          target="_blank"
-        >
-          <FaGithubSquare />
-        </a>
+    
       </motion.div>
     </section>
   );

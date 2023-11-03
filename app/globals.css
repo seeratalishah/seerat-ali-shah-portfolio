@@ -13,3 +13,82 @@ html.dark {
 .borderBlack {
   @apply border border-black/10;
 }
+
+.html-icon{
+  color: #ED7D31;
+}
+
+.css-icon{
+  color: #092dbb;
+}
+
+.js-icon{
+  color: #e60808;
+}
+
+.ts-icon{
+  color: #b9b906;
+}
+
+.react-icon{
+  color: #05a1ef;
+}
+
+.node-icon{
+  color: #12ba03;
+}
+
+.git-icon{
+  color: #922c04;
+}
+
+.tw-icon{
+  color: #bb03b5;
+}
+
+.md-icon{
+  color: #15bb03;
+}
+
+.redux-icon{
+  color: #e8032d;
+}
+
+.express-icon{
+  color: #f48506;
+}
+
+.antd-icon{
+  color: #06bdf4;
+}
+
+.bs-icon{
+  color: #01607d;
+}
+
+.gh-icon{
+  color: #591750;
+}
+
+.bb-icon{
+  color: #1951f7;
+}
+
+.jira-icon{
+  color: #4989f8;
+}
+
+.pm-icon{
+  color: #F76936;
+}
+
+.api-icon{
+  color: #03ab7c;
+}
+
+.fb-icon{
+  color: #FFCC34;
+}
+
+
+
