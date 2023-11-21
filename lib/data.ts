@@ -109,7 +109,7 @@ export const skillsData = [
   {skill: "Redux", icon: React.createElement(SiRedux), color: "redux-icon"},
   {skill: "Express", icon: React.createElement(SiExpress), color: "express-icon"},
   {skill: "AntDesign", icon: React.createElement(SiAntdesign), color: "antd-icon"},
-  {skill: "Bootstarp", icon: React.createElement(SiBootstrap), color: "bs-icon"},
+  {skill: "Bootstrap", icon: React.createElement(SiBootstrap), color: "bs-icon"},
   {skill: "GitHub", icon: React.createElement(AiOutlineGithub), color: "gh-icon"},
   {skill: "BitBucket", icon: React.createElement(SiBitbucket), color: "bb-icon"},
   {skill: "Jira", icon: React.createElement(SiJira), color: "jira-icon"},
